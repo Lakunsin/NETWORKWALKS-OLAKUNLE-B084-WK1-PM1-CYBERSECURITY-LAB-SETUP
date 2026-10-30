@@ -121,13 +121,9 @@ sudo nmcli connection up "Wired connection 1"
 ## Author
 **Olakunle Odesanya**  
 
-**Role:** Aspiring SOC Analyst
+**Role:** Aspiring SOC Analyst  
 **Github:** <https://github.com/Lakunsin>  
 **LinkedIn:** <https://www.linkedin.com/in/olakunle-o-04a51a257>
 
 ## Project Information
-**Program Name:** Cybersecurity at Networkwalks | **Week:** 01**Project:** Cybersecurity & Pentesting Lab Setup
-- **Repository:** GitHub
-
-Program Name: Cybersecurity at Networkwalks | Week: 01 | Project: Cybersecurity & Pentesting Lab Setup | Repository: GitHub
-
+**Program Name:** Cybersecurity at Networkwalks | **Week:** 01**Project:** Cybersecurity & Pentesting Lab Setup **Repository:** GitHub
