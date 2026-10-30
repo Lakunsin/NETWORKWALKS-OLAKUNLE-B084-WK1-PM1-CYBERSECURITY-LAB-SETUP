@@ -87,7 +87,9 @@ Enabled a shared folder in VirtualBox pointing to the host's `/downloads` path w
 | :--- | :--- | :--- |
 | **Checked IP address** | `ip a` | Displayed the correct Kali IP |
 | **Test internet connectivity** | `ping -c 4 8.8.8.8` | 0% packet loss, successful |
-| **Test gateway** | `ping -c 4 10.0.0.1` | 0% packet loss, successful |
+| **Test gateway** | `ping -c 4 10.0.0.1` | 0% packet loss, successful |  
+![9_screenshot_kali_9_Lab_Verify](9_screenshot_kali_9_Lab_Verify.png)  
+![10_screenshot_kali_10_Lab_Verify](10_screenshot_kali_10_Lab_Verify.png)
 
 ## 🟩 Problems Encountered & Solutions
 After manually configuring static IPv4 settings, internet connectivity failed. Reconfigured and restarted the network connection using NetworkManager:  
