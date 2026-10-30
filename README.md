@@ -73,7 +73,8 @@ The Kali Linux network configuration was set up with a static IPv4 address to en
 Captured a working state snapshot of the virtual machine to serve as a reliable recovery point if lab testing causes system instability.
 
 ### Step 7: Clipboard & File Drag-and-Drop
-Enabled bidirectional Clipboard & File Drag-and-Drop in VM settings.
+Enabled bidirectional Clipboard & File Drag-and-Drop in VM settings.  
+![6_screenshot_VM_6_drag_drop](6_screenshot_VM_6_drag_drop.png)
 
 ### Step 8: Shared Folders with Host System
 Enabled a shared folder in VirtualBox pointing to the host's `/downloads` path with Auto-mount enabled, generating the desktop mount point (`sf_downloads`).
