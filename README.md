@@ -53,11 +53,13 @@ Oracle VirtualBox 7.2.6 was downloaded and installed.
 
 ### Step 3: Created a NAT Network
 Configured a custom VirtualBox NAT Network named `NATNetworkwalks` with the IPv4 prefix `10.0.0.0/24`. DHCP was enabled. The NAT Network was selected to enable inter-VM communication and outbound internet access, laying the groundwork for integrated attacker-target testing within the lab.  
+
 ![1_screenshot_VM_1_NAT_Network](1_screenshot_VM_1_NAT_Network.png)  
 ![2_screenshot_VM_2_NAT_NETWORK](2_screenshot_VM_2_NAT_NETWORK.png)
 
 ### Step 4: Kali Linux Installation
 Downloaded 7-Zip and the Kali Linux installer ISO. 7-Zip was installed and used to extract/manage files. Ran the Kali Linux graphical installation wizard, configured user accounts, allocated 4096 MB RAM, partitioned a 50 GB virtual hard disk, and completed the base OS setup.  
+
 ![3_screenshot_kali_3_Install](3_screenshot_kali_3_Install.png)  
 ![4_screenshot_kali_4_Install](4_screenshot_kali_4_Install.png)
 
@@ -67,6 +69,7 @@ The Kali Linux network configuration was set up with a static IPv4 address to en
 - **Netmask:** `24`
 - **Gateway:** `10.0.0.1`
 - **DNS Servers:** `8.8.8.8`  
+
 ![5_screenshot_kali_5_configureNetwork](5_screenshot_kali_5_configureNetwork.png)
 
 ### Step 6: Took a VM Snapshot
@@ -74,10 +77,12 @@ Captured a working state snapshot of the virtual machine to serve as a reliable 
 
 ### Step 7: Clipboard & File Drag-and-Drop
 Enabled bidirectional Clipboard & File Drag-and-Drop in VM settings.  
+
 ![6_screenshot_VM_6_drag_drop](6_screenshot_VM_6_drag_drop.png)
 
 ### Step 8: Shared Folders with Host System
 Enabled a shared folder in VirtualBox pointing to the host's `/downloads` path with Auto-mount enabled, generating the desktop mount point (`sf_downloads`).  
+
 ![7_screenshot_VM_7_Share_Folder](7_screenshot_VM_7_Share_Folder.png)  
 ![8_screenshot_VM_8_Share_Folder](8_screenshot_VM_8_Share_Folder.png)
 
@@ -98,7 +103,9 @@ After manually configuring static IPv4 settings, internet connectivity failed. R
 
 sudo nmcli connection modify "Wired connection 1" ipv4.dad-timeout 0  
 sudo nmcli connection down "Wired connection 1"  
-sudo nmcli connection up "Wired connection 1"
+sudo nmcli connection up "Wired connection 1"  
+
+![11_screenshot_kali_11_nmcli](11_screenshot_kali_11_nmcli.png)
 
 ## 🟩 Key Takeaways
 
