@@ -85,7 +85,49 @@ Enabled a shared folder in VirtualBox pointing to the host's `/downloads` path w
 | **Test gateway** | `ping -c 4 10.0.0.1` | 0% packet loss, successful |
 
 ## Problems Encountered & Solutions
-After manually configuring static IPv4 settings, internet connectivity failed due to Duplicate Address Detection (DAD) timeouts. Reconfigured and restarted the network connection using NetworkManager:
+After manually configuring static IPv4 settings, internet connectivity failed. Reconfigured and restarted the network connection using NetworkManager:
 sudo nmcli connection modify "Wired connection 1" ipv4.dad-timeout 0
 sudo nmcli connection down "Wired connection 1"
 sudo nmcli connection up "Wired connection 1"
+
+## Key Takeaways
+
+1. **NAT vs. NAT Network**  
+   A standard NAT configuration and a NAT Network serve different purposes. I configured a custom NAT Network to allow future inter-VM communication and external connectivity, establishing the foundation for a multi-machine cybersecurity laboratory.
+
+2. **Virtual Machine Networking**  
+   I learned how VirtualBox virtual network adapters connect virtual machines to custom subnets (`10.0.0.0/24`) and how correct network configuration ensures seamless communication between the host gateway and the guest machine.
+
+3. **Static IP Configuration**  
+   I configured and verified static IPv4 addressing (`10.0.0.2/24`), subnet masks, gateways (`10.0.0.1`), and DNS settings (`8.8.8.8`) in Kali Linux, while successfully troubleshooting and resolving timeouts using NetworkManager.
+
+4. **VM Snapshots**  
+   I captured a clean baseline snapshot of the virtual machine after initial setup, providing a reliable recovery point for future cybersecurity testing and lab exercises.
+
+5. **Documentation**  
+   I documented commands, configurations, encountered problems, and exact solutions (such as resolving the DAD timeout), recognizing its vital role in a professional cybersecurity project.
+
+6. **Hypervisor Foundation & Resource Allocation**  
+   - **Hardware Virtualization:** Ensuring Intel VT-x/AMD-V is enabled and Windows Hyper-V is disabled prevents hypervisor resource conflicts and performance bottlenecks.
+   - **Resource Balancing:** Allocated optimal CPU and RAM to keep the host responsive to run security tools.
+
+7. **Host-Guest Integration & Workflow**  
+   - **Seamless Interoperability:** Enabled bidirectional clipboard and drag-and-drop to eliminate friction when moving text and files between the host and Kali.
+   - **Shared Storage:** Mapped the host `/downloads` directory (`sf_downloads`) to streamline importing wordlists, scripts, and tools.
+
+## Tools & Resources
+- [7-Zip](https://7-zip.org/download.html)
+- [VirtualBox](https://virtualbox.org/wiki/Downloads)
+- [Kali Linux](https://www.kali.org/get-kali/#kali-installer-images)
+
+## Author
+**Olakunle Odesanya**  
+- **Github:** [Lakunsin](https://github.com/Lakunsin)  
+- **Role:** Aspiring SOC Analyst  
+- **LinkedIn:** [Olakunle Odesanya](https://www.linkedin.com/in/olakunle-o-04a51a257)
+
+## Project Information
+- **Program Name:** Cybersecurity at Networkwalks
+- **Week:** 01
+- **Project:** Cybersecurity & Pentesting Lab Setup
+- **Repository:** GitHub
