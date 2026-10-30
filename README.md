@@ -1,7 +1,6 @@
 # Cybersecurity Lab Environment Setup
-🟩 **Project Overview**
-This project documents the complete configuratio
-## Project Overview
+
+## 🟩 Project Overview
 This project documents the complete configuration, deployment, and verification of a dedicated cybersecurity testing lab. The environment is built entirely on local virtualization infrastructure to provide a safe, isolated workspace for security assessment and ethical hacking exercises using VirtualBox and Kali Linux.
 
 ## Objectives
