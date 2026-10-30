@@ -66,7 +66,7 @@ The Kali Linux network configuration was set up with a static IPv4 address to en
 - **Address:** `10.0.0.2`
 - **Netmask:** `24`
 - **Gateway:** `10.0.0.1`
-- **DNS Servers:** `8.8.8.8`
+- **DNS Servers:** `8.8.8.8`  
 ![5_screenshot_kali_5_configureNetwork](5_screenshot_kali_5_configureNetwork.png)
 
 ### Step 6: Took a VM Snapshot
