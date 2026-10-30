@@ -57,7 +57,9 @@ Configured a custom VirtualBox NAT Network named `NATNetworkwalks` with the IPv4
 ![2_screenshot_VM_2_NAT_NETWORK](2_screenshot_VM_2_NAT_NETWORK.png)
 
 ### Step 4: Kali Linux Installation
-Downloaded 7-Zip and the Kali Linux installer ISO. 7-Zip was installed and used to extract/manage files. Ran the Kali Linux graphical installation wizard, configured user accounts, allocated 4096 MB RAM, partitioned a 50 GB virtual hard disk, and completed the base OS setup.
+Downloaded 7-Zip and the Kali Linux installer ISO. 7-Zip was installed and used to extract/manage files. Ran the Kali Linux graphical installation wizard, configured user accounts, allocated 4096 MB RAM, partitioned a 50 GB virtual hard disk, and completed the base OS setup.  
+![3_screenshot_kali_3_Install](3_screenshot_kali_3_Install.png)  
+![4_screenshot_kali_4_Install](4_screenshot_kali_4_Install.png)
 
 ### Step 5: Configure the Kali Linux Network
 The Kali Linux network configuration was set up with a static IPv4 address to ensure consistency during lab sessions:
