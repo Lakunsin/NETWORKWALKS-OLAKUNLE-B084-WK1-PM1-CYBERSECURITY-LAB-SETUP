@@ -67,6 +67,7 @@ The Kali Linux network configuration was set up with a static IPv4 address to en
 - **Netmask:** `24`
 - **Gateway:** `10.0.0.1`
 - **DNS Servers:** `8.8.8.8`
+![5_screenshot_kali_5_configureNetwork](5_screenshot_kali_5_configureNetwork.png)
 
 ### Step 6: Took a VM Snapshot
 Captured a working state snapshot of the virtual machine to serve as a reliable recovery point if lab testing causes system instability.
