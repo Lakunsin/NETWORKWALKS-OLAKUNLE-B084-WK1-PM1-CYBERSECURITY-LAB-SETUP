@@ -21,7 +21,7 @@ The purpose of this lab is to build a reliable, repeatable, and isolated environ
 
 ## 🟩 Lab Architecture
 - **Host System:** Local laptop running the primary operating system and hosting the virtualization software.
-- **Hypervisor:** Oracle VirtualBox managing virtual hardware, storage controllers, and network switches.
+- **Hypervisor:** Oracle VirtualBox manage virtual hardware, storage controllers, and network switches.
 - **Guest Operating System:** Kali Linux installed on a virtual hard disk with a dedicated static IP address (`10.0.0.2/24`).
 - **Network Topology:** A private NAT Network (`10.0.0.0/24`) routing traffic through the host gateway (`10.0.0.1`) with external internet access via public DNS (`8.8.8.8`).
 - **Resource Sharing:** A direct folder bridge mapping the host's `/downloads` directory into the Kali Linux environment.
@@ -77,7 +77,9 @@ Enabled bidirectional Clipboard & File Drag-and-Drop in VM settings.
 ![6_screenshot_VM_6_drag_drop](6_screenshot_VM_6_drag_drop.png)
 
 ### Step 8: Shared Folders with Host System
-Enabled a shared folder in VirtualBox pointing to the host's `/downloads` path with Auto-mount enabled, generating the desktop mount point (`sf_downloads`).
+Enabled a shared folder in VirtualBox pointing to the host's `/downloads` path with Auto-mount enabled, generating the desktop mount point (`sf_downloads`).  
+![7_screenshot_VM_7_Share_Folder](7_screenshot_VM_7_Share_Folder.png)  
+![8_screenshot_VM_8_Share_Folder](8_screenshot_VM_8_Share_Folder.png)
 
 ## 🟩 Lab Verification
 
