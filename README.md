@@ -84,8 +84,8 @@ Enabled a shared folder in VirtualBox pointing to the host's `/downloads` path w
 ## Problems Encountered & Solutions
 After manually configuring static IPv4 settings, internet connectivity failed. Reconfigured and restarted the network connection using NetworkManager:  
 
-sudo nmcli connection modify "Wired connection 1" ipv4.dad-timeout 0
-sudo nmcli connection down "Wired connection 1"
+sudo nmcli connection modify "Wired connection 1" ipv4.dad-timeout 0  
+sudo nmcli connection down "Wired connection 1"  
 sudo nmcli connection up "Wired connection 1"
 
 ## Key Takeaways
