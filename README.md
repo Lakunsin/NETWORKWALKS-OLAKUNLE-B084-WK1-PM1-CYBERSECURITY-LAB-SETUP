@@ -1,6 +1,3 @@
-# NETWORKWALKS-OLAKUNLE-B084-WK1-PM1-CYBERSECURITY-LAB-SETUP
-Cybersecurity Lab Setup: VirtualBox, Kali Linux, custom NAT networking, static IP configuration, and host-guest integration.
-
 # Cybersecurity Lab Environment Setup
 
 ## Project Overview
@@ -80,12 +77,13 @@ Enabled a shared folder in VirtualBox pointing to the host's `/downloads` path w
 
 | Test | Command | Expected Result |
 | :--- | :--- | :--- |
-| **Checked IP address** | `ip a` | Displayed the correct Kali IP (`10.0.0.2`) |
+| **Checked IP address** | `ip a` | Displayed the correct Kali IP |
 | **Test internet connectivity** | `ping -c 4 8.8.8.8` | 0% packet loss, successful |
 | **Test gateway** | `ping -c 4 10.0.0.1` | 0% packet loss, successful |
 
 ## Problems Encountered & Solutions
-After manually configuring static IPv4 settings, internet connectivity failed. Reconfigured and restarted the network connection using NetworkManager:
+After manually configuring static IPv4 settings, internet connectivity failed. Reconfigured and restarted the network connection using NetworkManager:  
+
 sudo nmcli connection modify "Wired connection 1" ipv4.dad-timeout 0
 sudo nmcli connection down "Wired connection 1"
 sudo nmcli connection up "Wired connection 1"
