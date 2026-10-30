@@ -46,13 +46,14 @@ The purpose of this lab is to build a reliable, repeatable, and isolated environ
 ## 🟩 Lab Setup Procedure
 
 ### Step 1: Host Prerequisites & BIOS Configuration
-Hardware virtualization (Intel VT-x or AMD-V) was enabled in the BIOS/UEFI while Windows Hyper-V was disabled to prevent hypervisor conflicts, ensuring third-party tools like VirtualBox run smoothly.
+Hardware virtualization (Intel VT-x or AMD-V) was enabled in the BIOS/UEFI while Windows Hyper-V was disabled to prevent hypervisor conflicts,ensuring third-party tools like VirtualBox run smoothly.
 
 ### Step 2: Install VirtualBox
 Oracle VirtualBox 7.2.6 was downloaded and installed.
 
 ### Step 3: Created a NAT Network
-Configured a custom VirtualBox NAT Network named `NATNetworkwalks` with the IPv4 prefix `10.0.0.0/24`. DHCP was enabled. The NAT Network was selected to enable inter-VM communication and outbound internet access, laying the groundwork for integrated attacker-target testing within the lab.
+Configured a custom VirtualBox NAT Network named `NATNetworkwalks` with the IPv4 prefix `10.0.0.0/24`. DHCP was enabled. The NAT Network was selected to enable inter-VM communication and outbound internet access, laying the groundwork for integrated attacker-target testing within the lab.  
+![screenshot_VM_1](1_screenshot_VM_1_NAT_Network)
 
 ### Step 4: Kali Linux Installation
 Downloaded 7-Zip and the Kali Linux installer ISO. 7-Zip was installed and used to extract/manage files. Ran the Kali Linux graphical installation wizard, configured user accounts, allocated 4096 MB RAM, partitioned a 50 GB virtual hard disk, and completed the base OS setup.
