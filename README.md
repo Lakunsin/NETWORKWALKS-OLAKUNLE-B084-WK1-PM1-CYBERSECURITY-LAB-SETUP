@@ -3,7 +3,7 @@
 ## 🟩 Project Overview
 This project documents the complete configuration, deployment, and verification of a dedicated cybersecurity testing lab. The environment is built entirely on local virtualization infrastructure to provide a safe, isolated workspace for security assessment and ethical hacking exercises using VirtualBox and Kali Linux.
 
-## Objectives
+## 🟩 Objectives
 - Install and configure Oracle VirtualBox
 - Install and configure Kali Linux as a primary security auditing and hacking workstation
 - Create a private NAT Network for the cybersecurity lab
@@ -14,19 +14,19 @@ This project documents the complete configuration, deployment, and verification 
 - Enable Clipboard & File Drag-and-Drop
 - Enable Shared Folders with Host system
 
-## Purpose of the Lab
+## 🟩 Purpose of the Lab
 The purpose of this lab is to build a reliable, repeatable, and isolated environment for practicing ethical hacking methodologies, analyzing network traffic, testing security tools, and performing administrative tasks without risking host system integrity or exposing the primary operating system to experimental security configurations.
 
 > **NOTE:** This lab is for educational purposes only.
 
-## Lab Architecture
+## 🟩 Lab Architecture
 - **Host System:** Local laptop running the primary operating system and hosting the virtualization software.
 - **Hypervisor:** Oracle VirtualBox managing virtual hardware, storage controllers, and network switches.
 - **Guest Operating System:** Kali Linux installed on a virtual hard disk with a dedicated static IP address (`10.0.0.2/24`).
 - **Network Topology:** A private NAT Network (`10.0.0.0/24`) routing traffic through the host gateway (`10.0.0.1`) with external internet access via public DNS (`8.8.8.8`).
 - **Resource Sharing:** A direct folder bridge mapping the host's `/downloads` directory into the Kali Linux environment.
 
-## Lab Configuration
+## 🟩 Lab Configuration
 
 | Components | Configuration |
 | :--- | :--- |
@@ -43,7 +43,7 @@ The purpose of this lab is to build a reliable, repeatable, and isolated environ
 | **Default Gateway** | 10.0.0.1 |
 | **DNS Server** | 8.8.8.8 |
 
-## Lab Setup Procedure
+## 🟩 Lab Setup Procedure
 
 ### Step 1: Host Prerequisites & BIOS Configuration
 Hardware virtualization (Intel VT-x or AMD-V) was enabled in the BIOS/UEFI while Windows Hyper-V was disabled to prevent hypervisor conflicts, ensuring third-party tools like VirtualBox run smoothly.
@@ -73,7 +73,7 @@ Enabled bidirectional Clipboard & File Drag-and-Drop in VM settings.
 ### Step 8: Shared Folders with Host System
 Enabled a shared folder in VirtualBox pointing to the host's `/downloads` path with Auto-mount enabled, generating the desktop mount point (`sf_downloads`).
 
-## Lab Verification
+## 🟩 Lab Verification
 
 | Test | Command | Expected Result |
 | :--- | :--- | :--- |
@@ -81,14 +81,14 @@ Enabled a shared folder in VirtualBox pointing to the host's `/downloads` path w
 | **Test internet connectivity** | `ping -c 4 8.8.8.8` | 0% packet loss, successful |
 | **Test gateway** | `ping -c 4 10.0.0.1` | 0% packet loss, successful |
 
-## Problems Encountered & Solutions
+## 🟩 Problems Encountered & Solutions
 After manually configuring static IPv4 settings, internet connectivity failed. Reconfigured and restarted the network connection using NetworkManager:  
 
 sudo nmcli connection modify "Wired connection 1" ipv4.dad-timeout 0  
 sudo nmcli connection down "Wired connection 1"  
 sudo nmcli connection up "Wired connection 1"
 
-## Key Takeaways
+## 🟩 Key Takeaways
 
 1. **NAT vs. NAT Network**  
    A standard NAT configuration and a NAT Network serve different purposes. I configured a custom NAT Network to allow future inter-VM communication and external connectivity, establishing the foundation for a multi-machine cybersecurity laboratory.
@@ -113,17 +113,17 @@ sudo nmcli connection up "Wired connection 1"
    - **Seamless Interoperability:** Enabled bidirectional clipboard and drag-and-drop to eliminate friction when moving text and files between the host and Kali.
    - **Shared Storage:** Mapped the host `/downloads` directory (`sf_downloads`) to streamline importing wordlists, scripts, and tools.
 
-## Tools & Resources
+## 🟩 Tools & Resources
 - [7-Zip](https://7-zip.org/download.html)
 - [VirtualBox](https://virtualbox.org/wiki/Downloads)
 - [Kali Linux](https://www.kali.org/get-kali/#kali-installer-images)
 
-## Author
+## 🟩 Author
 **Olakunle Odesanya**  
 
 **Role:** Aspiring SOC Analyst  
 **Github:** <https://github.com/Lakunsin>  
 **LinkedIn:** <https://www.linkedin.com/in/olakunle-o-04a51a257>
 
-## Project Information
+## 🟩 Project Information
 **Program Name:** Cybersecurity at Networkwalks | **Week:** 01**Project:** Cybersecurity & Pentesting Lab Setup **Repository:** GitHub
