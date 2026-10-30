@@ -17,7 +17,7 @@ This project documents the complete configuration, deployment, and verification 
 ## 🟩 Purpose of the Lab
 The purpose of this lab is to build a reliable, repeatable, and isolated environment for practicing ethical hacking methodologies, analyzing network traffic, testing security tools, and performing administrative tasks without risking host system integrity or exposing the primary operating system to experimental security configurations.
 
-> **NOTE:** This lab is for educational purposes only.
+> ## **NOTE:** This lab is for educational purposes only.
 
 ## 🟩 Lab Architecture
 - **Host System:** Local laptop running the primary operating system and hosting the virtualization software.
